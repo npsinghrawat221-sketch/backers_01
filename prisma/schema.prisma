@@ -1,0 +1,235 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id                 String              @id @default(cuid())
+  email              String              @unique
+  passwordHash       String
+  name               String
+  phone              String?
+  role               String              @default("CUSTOMER") // "ADMIN" | "CUSTOMER"
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  orders             Order[]
+  customCakeRequests CustomCakeRequest[]
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  name        String
+  description String?
+  image       String?
+  icon        String?
+  order       Int       @default(0)
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  products    Product[]
+}
+
+model Product {
+  id              String           @id @default(cuid())
+  slug            String           @unique
+  name            String
+  shortDesc       String
+  description     String
+  basePrice       Float
+  isEggless       Boolean          @default(true)
+  isBestseller    Boolean          @default(false)
+  isFeatured      Boolean          @default(false)
+  isSpecial       Boolean          @default(false)
+  rating          Float            @default(4.9)
+  reviewCount     Int              @default(0)
+  ingredients     String?
+  allergens       String?
+  preparationTime String           @default("2-4 Hours")
+  stockStatus     String           @default("IN_STOCK") // "IN_STOCK" | "LOW_STOCK" | "OUT_OF_STOCK"
+  seoTitle        String?
+  seoDescription  String?
+  seoKeywords     String?
+  categoryId      String
+  category        Category         @relation(fields: [categoryId], references: [id])
+  images          ProductImage[]
+  variants        ProductVariant[]
+  orderItems      OrderItem[]
+  reviews         Review[]
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  alt       String?
+  isPrimary Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model ProductVariant {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String   // e.g., "0.5 kg", "1 kg", "2 kg"
+  weightKg  Float    // e.g., 0.5, 1.0, 2.0
+  price     Float
+  servings  String   @default("4-6 Servings")
+  inStock   Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model ProductAddon {
+  id        String   @id @default(cuid())
+  name      String
+  price     Float
+  category  String   @default("Celebration") // "Candles", "Balloons", "Cards", "Toppers"
+  image     String?
+  inStock   Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model Order {
+  id               String      @id @default(cuid())
+  orderNumber      String      @unique // e.g. "BAK-2026-00101"
+  userId           String?
+  user             User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  customerName     String
+  customerEmail    String
+  customerPhone    String
+  deliveryType     String      @default("DELIVERY") // "DELIVERY" | "PICKUP"
+  address          String?
+  landmark         String?
+  city             String?     @default("Bangalore")
+  postalCode       String?
+  deliveryDate     String      // "YYYY-MM-DD"
+  deliverySlot     String      // "Morning (10 AM - 1 PM)", etc.
+  cakeMessage      String?
+  orderNotes       String?
+  subtotal         Float
+  discount         Float       @default(0)
+  deliveryCharge   Float       @default(0)
+  tax              Float       @default(0)
+  total            Float
+  status           String      @default("PLACED") // "PLACED", "PAYMENT_CONFIRMED", "ACCEPTED", "PREPARING", "READY", "OUT_FOR_DELIVERY", "DELIVERED", "CANCELLED"
+  paymentStatus    String      @default("PENDING") // "PENDING", "PAID", "FAILED", "REFUNDED"
+  paymentMethod    String      @default("RAZORPAY") // "RAZORPAY", "COD", "STORE_PICKUP"
+  razorpayOrderId  String?
+  razorpayPaymentId String?
+  items            OrderItem[]
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+}
+
+model OrderItem {
+  id          String   @id @default(cuid())
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product  @relation(fields: [productId], references: [id])
+  variantId   String?
+  variantName String?
+  weightKg    Float?
+  unitPrice   Float
+  quantity    Int      @default(1)
+  cakeMessage String?
+  eggless     Boolean  @default(true)
+  totalPrice  Float
+  createdAt   DateTime @default(now())
+}
+
+model CustomCakeRequest {
+  id                String   @id @default(cuid())
+  inquiryNumber     String   @unique // e.g. "CC-2026-00101"
+  userId            String?
+  user              User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  customerName      String
+  customerPhone     String
+  customerEmail     String
+  customerWhatsapp  String?
+  occasion          String
+  flavor            String
+  tierSizeKg        String   // "0.5 kg", "1 kg", "2 Tier (3 kg)", etc.
+  servingsEstimate  String?
+  referenceImageUrl String?
+  designNotes       String?
+  cakeMessage       String?
+  themeColor        String?
+  toppings          String?
+  nameOnCake        String?
+  ageOnCake         String?
+  isEggless         Boolean  @default(true)
+  deliveryDate      String
+  deliverySlot      String
+  deliveryType      String   @default("DELIVERY")
+  address           String?
+  estimatedPriceMin Float?
+  estimatedPriceMax Float?
+  quotationPrice    Float?
+  adminNotes        String?
+  status            String   @default("PENDING") // "PENDING", "REVIEWING", "QUOTATION_SENT", "CUSTOMER_APPROVED", "PREPARING", "READY", "DELIVERED", "REJECTED"
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  productId   String?
+  product     Product? @relation(fields: [productId], references: [id], onDelete: Cascade)
+  customerName String
+  rating      Int      @default(5)
+  title       String?
+  comment     String
+  isApproved  Boolean  @default(true)
+  isFeatured  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model Coupon {
+  id             String    @id @default(cuid())
+  code           String    @unique
+  discountType   String    @default("PERCENTAGE") // "PERCENTAGE" | "FIXED"
+  discountValue  Float
+  minOrderAmount Float     @default(0)
+  maxDiscount    Float?
+  validUntil     DateTime?
+  isActive       Boolean   @default(true)
+  usageCount     Int       @default(0)
+  createdAt      DateTime  @default(now())
+}
+
+model BlogPost {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  title          String
+  excerpt        String
+  content        String
+  coverImage     String
+  author         String   @default("Chef Pierre & Team")
+  readTime       String   @default("5 min read")
+  publishedAt    DateTime @default(now())
+  isPublished    Boolean  @default(true)
+  seoTitle       String?
+  seoDescription String?
+  tags           String?  // comma-separated tags
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  title     String
+  message   String
+  type      String   @default("ORDER") // "ORDER" | "CUSTOM_CAKE" | "REVIEW"
+  isRead    Boolean  @default(false)
+  link      String?
+  createdAt DateTime @default(now())
+}

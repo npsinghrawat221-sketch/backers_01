@@ -1,0 +1,1394 @@
+{
+  "users": [
+    {
+      "id": "user-admin-1",
+      "email": "admin@bakery.com",
+      "passwordHash": "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.qH0vJ9Z5k89y8.2e4rO4w.a/s6r3rG",
+      "name": "Laxmin Rawat",
+      "phone": "+916261507068",
+      "role": "ADMIN",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "user-customer-1",
+      "email": "priya.sharma@example.com",
+      "passwordHash": "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.qH0vJ9Z5k89y8.2e4rO4w.a/s6r3rG",
+      "name": "Priya Sharma",
+      "phone": "+919812345678",
+      "role": "CUSTOMER",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "updatedAt": "2026-01-15T00:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "slug": "fresh-fruit-cakes",
+      "name": "Fresh Fruit & Exotic Cakes",
+      "description": "Handcrafted with fresh seasonal fruits, real fruit compotes, and light airy creams.",
+      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop",
+      "icon": "Apple",
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "cat-2",
+      "slug": "chocolate-gourmet",
+      "name": "Chocolate & Gourmet Cakes",
+      "description": "Decadent Dutch cocoa, rich Belgian ganache, Lotus Biscoff, and chocolate walnut indulgence.",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
+      "icon": "Heart",
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "cat-3",
+      "slug": "celebration-classics",
+      "name": "Celebration Classics",
+      "description": "Timeless favorites: Red Velvet, Ice Cream Cake, Butterscotch, Black Forest, and Vanilla.",
+      "image": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?q=80&w=800&auto=format&fit=crop",
+      "icon": "Cake",
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "cat-4",
+      "slug": "custom-designer-cakes",
+      "name": "Custom & Tiered Cakes",
+      "description": "Bespoke 2-tier and 3-tier celebration cakes designed to your dream theme and occasion.",
+      "image": "https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=800&auto=format&fit=crop",
+      "icon": "Sparkles",
+      "order": 4,
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "slug": "ice-cream-cake",
+      "name": "Artisanal Ice Cream Cake",
+      "shortDesc": "Chilled layers of velvety cream, rich sponge, and gourmet chocolate shavings.",
+      "description": "A celebration centerpiece! Alternating layers of chilled artisanal ice cream creaminess and moist eggless sponge. Finished with elegant artisanal garnish and chocolate curls. Must be stored in deep freezer.",
+      "basePrice": 650,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 4.95,
+      "reviewCount": 118,
+      "ingredients": "Fresh Dairy Cream, Chilled Ice Cream Base, Organic Flour, Cocoa Swirls, Vanilla Extract",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "3-4 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-3",
+      "seoTitle": "Ice Cream Cake | 100% Eggless Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order freshly crafted eggless Ice Cream Cake in Greater Noida. Rs. 650. Doorstep delivery.",
+      "seoKeywords": "ice cream cake, eggless ice cream cake greater noida, celebration cake",
+      "images": [
+        {
+          "id": "img-1",
+          "productId": "prod-1",
+          "url": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Artisanal Ice Cream Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-1-1",
+          "productId": "prod-1",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 650,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-1-2",
+          "productId": "prod-1",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1200,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-1-3",
+          "productId": "prod-1",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1750,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-1-4",
+          "productId": "prod-1",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2300,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-2",
+      "slug": "vanilla-cake",
+      "name": "Classic Madagascar Vanilla Cake",
+      "shortDesc": "Delicate and fluffy vanilla sponge layered with whipped vanilla bean cream.",
+      "description": "A timeless crowd pleaser. Made with pure Madagascar vanilla extract, light and fluffy 100% eggless sponge, and airy whipped cream with delicate piping. Clean, comforting, and deliciously moist.",
+      "basePrice": 450,
+      "isEggless": true,
+      "isBestseller": false,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.88,
+      "reviewCount": 84,
+      "ingredients": "Madagascar Vanilla Extract, Organic Flour, Pure Cane Sugar, Fresh Cream, Cultured Buttermilk",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-3",
+      "seoTitle": "Classic Vanilla Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order soft and moist Eggless Vanilla Cake in Greater Noida. Rs. 450. Freshly baked.",
+      "seoKeywords": "vanilla cake, eggless vanilla cake, simple birthday cake greater noida",
+      "images": [
+        {
+          "id": "img-2",
+          "productId": "prod-2",
+          "url": "https://images.unsplash.com/photo-1562777717-dc6984f65a63?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Classic Madagascar Vanilla Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-2-1",
+          "productId": "prod-2",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 450,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-2-2",
+          "productId": "prod-2",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 850,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-2-3",
+          "productId": "prod-2",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1250,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-2-4",
+          "productId": "prod-2",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 1650,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-3",
+      "slug": "strawberry-cake",
+      "name": "Fresh Strawberry Glaze Cake",
+      "shortDesc": "Luscious strawberry compote layered with light pink sponge and fresh strawberry garnish.",
+      "description": "Sweet, tart, and aromatic. Prepared with natural strawberry puree infused into moist eggless sponge and layered with silky strawberry glaze and fresh fruit slices.",
+      "basePrice": 480,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.92,
+      "reviewCount": 96,
+      "ingredients": "Fresh Strawberry Compote, Organic Flour, Pure Cane Sugar, Whipped Dairy Cream, White Chocolate Pearls",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-1",
+      "seoTitle": "Fresh Strawberry Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order luscious 100% eggless Strawberry Cake in Greater Noida. Rs. 480.",
+      "seoKeywords": "strawberry cake, fresh strawberry cake, eggless strawberry cake greater noida",
+      "images": [
+        {
+          "id": "img-3",
+          "productId": "prod-3",
+          "url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Fresh Strawberry Glaze Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-3-1",
+          "productId": "prod-3",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 480,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-3-2",
+          "productId": "prod-3",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 900,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-3-3",
+          "productId": "prod-3",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1320,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-3-4",
+          "productId": "prod-3",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 1750,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-4",
+      "slug": "blueberry-cake",
+      "name": "Wild Blueberry Blossom Cake",
+      "shortDesc": "Rich Canadian wild blueberry reduction layered with velvety whipped cream.",
+      "description": "Packed with real whole blueberries cooked down into a rich purple compote. Layered between soft sponge and adorned with a mirror blueberry swirl and white chocolate ribbons.",
+      "basePrice": 480,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.93,
+      "reviewCount": 104,
+      "ingredients": "Wild Blueberries, Organic Flour, Cultured Dairy, Cane Sugar, Vanilla Essence",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-1",
+      "seoTitle": "Wild Blueberry Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Delicious 100% eggless Blueberry Cake in Greater Noida. Rs. 480. Same day delivery.",
+      "seoKeywords": "blueberry cake, eggless blueberry cake, berry cake greater noida",
+      "images": [
+        {
+          "id": "img-4",
+          "productId": "prod-4",
+          "url": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Wild Blueberry Blossom Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-4-1",
+          "productId": "prod-4",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 480,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-4-2",
+          "productId": "prod-4",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 900,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-4-3",
+          "productId": "prod-4",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1320,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-4-4",
+          "productId": "prod-4",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 1750,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-5",
+      "slug": "pineapple-cake",
+      "name": "Tropical Pineapple Gateau",
+      "shortDesc": "Juicy pineapple chunks and homemade pineapple reduction with fresh dairy cream.",
+      "description": "India's all-time favourite celebration gateau! Loaded with sweet caramelized pineapple bits inside, frosted with light cream, and garnished with candied cherries and pineapple fans.",
+      "basePrice": 500,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.96,
+      "reviewCount": 175,
+      "ingredients": "Fresh Pineapple Chunks, Pineapple Juice Reduction, Organic Flour, Dairy Whipped Cream, Glace Cherries",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-1",
+      "seoTitle": "Fresh Pineapple Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order classic Eggless Pineapple Cake in Greater Noida. Rs. 500. Juicy chunks & fresh cream.",
+      "seoKeywords": "pineapple cake, eggless pineapple cake, birthday pineapple cake greater noida",
+      "images": [
+        {
+          "id": "img-5",
+          "productId": "prod-5",
+          "url": "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Tropical Pineapple Gateau",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-5-1",
+          "productId": "prod-5",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 500,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-5-2",
+          "productId": "prod-5",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 950,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-5-3",
+          "productId": "prod-5",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1400,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-5-4",
+          "productId": "prod-5",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 1850,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-6",
+      "slug": "butterscotch-cake",
+      "name": "Crunchy Butterscotch Praline Cake",
+      "shortDesc": "Golden butterscotch caramel, homemade cashew praline crunch, and caramel drizzle.",
+      "description": "Irresistible caramel crunch in every bite! Vanilla sponge infused with rich butterscotch syrup, filled with crunchy roasted cashew nut praline, and topped with golden caramel glaze.",
+      "basePrice": 500,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.94,
+      "reviewCount": 160,
+      "ingredients": "Butterscotch Caramel, Roasted Cashew Praline, Dairy Cream, Organic Flour, Cane Sugar",
+      "allergens": "Contains Dairy, Nuts & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-3",
+      "seoTitle": "Butterscotch Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order crunchy Butterscotch Cake in Greater Noida. Rs. 500. Homemade cashew praline.",
+      "seoKeywords": "butterscotch cake, crunchy butterscotch cake, eggless butterscotch greater noida",
+      "images": [
+        {
+          "id": "img-6",
+          "productId": "prod-6",
+          "url": "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Crunchy Butterscotch Praline Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-6-1",
+          "productId": "prod-6",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 500,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-6-2",
+          "productId": "prod-6",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 950,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-6-3",
+          "productId": "prod-6",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1400,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-6-4",
+          "productId": "prod-6",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 1850,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-7",
+      "slug": "fruit-mango-cake",
+      "name": "Alphonso Mango Sensation Cake",
+      "shortDesc": "Rich Ratnagiri Alphonso mango pulp, fresh mango cubes, and mango mirror glaze.",
+      "description": "A tropical masterpiece made for mango lovers! Prepared with sweet Alphonso mango puree, layers of light chiffon sponge, and crowned with an elegant mango rose petal garnish.",
+      "basePrice": 550,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 4.98,
+      "reviewCount": 210,
+      "ingredients": "Alphonso Mango Puree, Mango Chunks, Organic Flour, Whipped Dairy Cream, White Chocolate Accents",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-1",
+      "seoTitle": "Fresh Mango Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order delicious Alphonso Mango Cake in Greater Noida. Rs. 550. 100% eggless fresh fruit.",
+      "seoKeywords": "mango cake, alphonso mango cake, fruit mango cake greater noida",
+      "images": [
+        {
+          "id": "img-7",
+          "productId": "prod-7",
+          "url": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Alphonso Mango Sensation Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-7-1",
+          "productId": "prod-7",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 550,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-7-2",
+          "productId": "prod-7",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1050,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-7-3",
+          "productId": "prod-7",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1550,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-7-4",
+          "productId": "prod-7",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2050,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-8",
+      "slug": "fresh-mixed-fruit-cake",
+      "name": "Signature Fresh Mixed Fruit Gateau",
+      "shortDesc": "Loaded with fresh kiwi, strawberries, dragonfruit, grapes, apples, and glazed seasonal fruits.",
+      "description": "Our most celebrated signature creation! Soft vanilla sponge frosted with dairy cream, filled with chopped fresh fruit cocktail, and lavishly crowned with freshly sliced kiwis, strawberries, grapes, and orange segments with natural glaze.",
+      "basePrice": 600,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 5,
+      "reviewCount": 280,
+      "ingredients": "Fresh Strawberries, Kiwi, Grapes, Dragonfruit, Pineapple, Organic Flour, Fresh Dairy Cream",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-1",
+      "seoTitle": "Fresh Fruit Cake in Greater Noida | Honey Bunny Bakers",
+      "seoDescription": "Order our signature 100% eggless Fresh Fruit Cake loaded with fresh fruits. Rs. 600.",
+      "seoKeywords": "fresh fruit cake, mixed fruit cake, fruit gateau greater noida, best fruit cake",
+      "images": [
+        {
+          "id": "img-8",
+          "productId": "prod-8",
+          "url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Signature Fresh Mixed Fruit Gateau",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-8-1",
+          "productId": "prod-8",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 600,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-8-2",
+          "productId": "prod-8",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1150,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-8-3",
+          "productId": "prod-8",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1680,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-8-4",
+          "productId": "prod-8",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2200,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-9",
+      "slug": "chocolate-cake",
+      "name": "Decadent Dutch Chocolate Cake",
+      "shortDesc": "Smooth Dutch cocoa fudge cream layered over ultra-soft moist chocolate sponge.",
+      "description": "Deep, rich, and comforting. Baked with imported Dutch cocoa, layered with smooth chocolate fudge frosting, and finished with a glossy chocolate drip and chocolate curls.",
+      "basePrice": 550,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.91,
+      "reviewCount": 152,
+      "ingredients": "Dutch Process Cocoa, Organic Flour, Dark Chocolate Ganache, Dairy Cream, Cane Sugar",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-2",
+      "seoTitle": "Chocolate Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order rich eggless Chocolate Cake in Greater Noida. Rs. 550. Soft moist chocolate fudge.",
+      "seoKeywords": "chocolate cake, eggless chocolate cake, birthday chocolate cake greater noida",
+      "images": [
+        {
+          "id": "img-9",
+          "productId": "prod-9",
+          "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Decadent Dutch Chocolate Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-9-1",
+          "productId": "prod-9",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 550,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-9-2",
+          "productId": "prod-9",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1050,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-9-3",
+          "productId": "prod-9",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1550,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-9-4",
+          "productId": "prod-9",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2050,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-10",
+      "slug": "red-velvet-cake",
+      "name": "Classic Red Velvet Cream Cheese Cake",
+      "shortDesc": "Vibrant scarlet velvet sponge paired with authentic cream cheese frosting.",
+      "description": "A romantic and luxurious showstopper. Vibrant red buttermilk sponge with subtle cocoa notes, filled and frosted with tangy cream cheese, and dusted with fine red velvet crumbs.",
+      "basePrice": 550,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 4.95,
+      "reviewCount": 140,
+      "ingredients": "Cream Cheese Frosting, Cultured Buttermilk, Organic Flour, Cocoa Powder, Pure Cane Sugar",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-3",
+      "seoTitle": "Red Velvet Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order authentic Eggless Red Velvet Cake with cream cheese in Greater Noida. Rs. 550.",
+      "seoKeywords": "red velvet cake, cream cheese red velvet, anniversary cake greater noida",
+      "images": [
+        {
+          "id": "img-10",
+          "productId": "prod-10",
+          "url": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Classic Red Velvet Cream Cheese Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-10-1",
+          "productId": "prod-10",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 550,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-10-2",
+          "productId": "prod-10",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1050,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-10-3",
+          "productId": "prod-10",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1550,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-10-4",
+          "productId": "prod-10",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2050,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-11",
+      "slug": "black-forest-cake",
+      "name": "German Black Forest Gateau",
+      "shortDesc": "Dark chocolate sponge infused with sour cherry compote, fresh cream, and chocolate flakes.",
+      "description": "A European classic with a gourmet touch! Layered with dark chocolate sponge, cherry reduction, fresh whipped cream, dark chocolate shavings, and maraschino cherries.",
+      "basePrice": 600,
+      "isEggless": true,
+      "isBestseller": false,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.89,
+      "reviewCount": 92,
+      "ingredients": "Dark Chocolate Flakes, Sour Black Cherries, Whipped Cream, Cocoa Sponge, Organic Flour",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "2-3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-2",
+      "seoTitle": "Black Forest Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order rich eggless German Black Forest Cake in Greater Noida. Rs. 600.",
+      "seoKeywords": "black forest cake, eggless black forest, cherry chocolate cake greater noida",
+      "images": [
+        {
+          "id": "img-11",
+          "productId": "prod-11",
+          "url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?q=80&w=1000&auto=format&fit=crop",
+          "alt": "German Black Forest Gateau",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-11-1",
+          "productId": "prod-11",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 600,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-11-2",
+          "productId": "prod-11",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1150,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-11-3",
+          "productId": "prod-11",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1680,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-11-4",
+          "productId": "prod-11",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2200,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-12",
+      "slug": "truffle-cake",
+      "name": "Pure Belgian Chocolate Truffle Cake",
+      "shortDesc": "Melt-in-the-mouth 70% dark Belgian chocolate ganache and dense chocolate fudge sponge.",
+      "description": "Pure chocolate heaven! Made exclusively with 70% dark Belgian couverture chocolate ganache, silky cocoa fudge, and hand-piped truffle rosettes. Rich, intense, and deeply satisfying.",
+      "basePrice": 700,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 4.99,
+      "reviewCount": 245,
+      "ingredients": "70% Belgian Couverture Chocolate, Heavy Cream, Dutch Cocoa, Unsalted Butter, Organic Flour",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-2",
+      "seoTitle": "Belgian Truffle Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order pure Belgian Chocolate Truffle Cake in Greater Noida. Rs. 700. 100% eggless.",
+      "seoKeywords": "truffle cake, belgian chocolate truffle, dark chocolate cake greater noida",
+      "images": [
+        {
+          "id": "img-12",
+          "productId": "prod-12",
+          "url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Pure Belgian Chocolate Truffle Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-12-1",
+          "productId": "prod-12",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 700,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-12-2",
+          "productId": "prod-12",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1350,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-12-3",
+          "productId": "prod-12",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1950,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-12-4",
+          "productId": "prod-12",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2550,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-13",
+      "slug": "rasmalai-delight-cake",
+      "name": "Royal Rasmalai & Saffron Pistachio Cake",
+      "shortDesc": "Infused with cardamom saffron milk, soft rasmalai dumplings, and Iranian pistachios.",
+      "description": "A royal Indian celebration favorite (Item #13 on menu). Soft cardamom-infused sponge soaked in rich saffron milk (Rabdi), layered with chunks of fresh Rasmalai, and garnished with roasted pistachios and dried rose petals.",
+      "basePrice": 650,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 4.97,
+      "reviewCount": 188,
+      "ingredients": "Fresh Rasmalai Dumplings, Kashmiri Saffron, Cardamom, Iranian Pistachios, Saffron Cream",
+      "allergens": "Contains Dairy, Nuts & Gluten. 100% Eggless.",
+      "preparationTime": "3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-3",
+      "seoTitle": "Rasmalai Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order rich Eggless Rasmalai Cake in Greater Noida. Rs. 650. Saffron, pistachios & fresh rasmalai.",
+      "seoKeywords": "rasmalai cake, royal saffron cake, eggless fusion cake greater noida",
+      "images": [
+        {
+          "id": "img-13",
+          "productId": "prod-13",
+          "url": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Royal Rasmalai & Saffron Pistachio Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-13-1",
+          "productId": "prod-13",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 650,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-13-2",
+          "productId": "prod-13",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1250,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-13-3",
+          "productId": "prod-13",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1800,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-13-4",
+          "productId": "prod-13",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2350,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-14",
+      "slug": "lotus-biscoff-cake",
+      "name": "Gourmet Lotus Biscoff Caramel Cake",
+      "shortDesc": "Lotus Biscoff cookie spread, spiced caramelized cream, and crunchy Biscoff biscuits.",
+      "description": "A modern gourmet sensation! Layers of vanilla-cinnamon sponge generously filled with authentic Lotus Biscoff cookie butter spread, frosted with caramelized Biscoff cream, and topped with crunchy Biscoff biscuit crust.",
+      "basePrice": 850,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": true,
+      "rating": 4.99,
+      "reviewCount": 165,
+      "ingredients": "Lotus Biscoff Spread & Biscuits, Organic Flour, Whipped Dairy Cream, Caramelized Cane Sugar",
+      "allergens": "Contains Dairy & Gluten. 100% Eggless.",
+      "preparationTime": "3-4 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-2",
+      "seoTitle": "Lotus Biscoff Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order decadent Lotus Biscoff Cake in Greater Noida. Rs. 850. 100% eggless gourmet bake.",
+      "seoKeywords": "biscoff cake, lotus biscoff cake, gourmet caramel cake greater noida",
+      "images": [
+        {
+          "id": "img-14",
+          "productId": "prod-14",
+          "url": "https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Gourmet Lotus Biscoff Caramel Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-14-1",
+          "productId": "prod-14",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 850,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-14-2",
+          "productId": "prod-14",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1600,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-14-3",
+          "productId": "prod-14",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 2350,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-14-4",
+          "productId": "prod-14",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 3100,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "prod-15",
+      "slug": "chocolate-walnut-cake",
+      "name": "Roasted Walnut Chocolate Fudge Cake",
+      "shortDesc": "Rich chocolate truffle frosting loaded with crunchy roasted California walnuts.",
+      "description": "The ultimate nutty chocolate indulgence! Moist chocolate fudge sponge layered with rich cocoa cream, generously packed with toasted California walnuts, and finished with glazed walnut halves.",
+      "basePrice": 650,
+      "isEggless": true,
+      "isBestseller": true,
+      "isFeatured": true,
+      "isSpecial": false,
+      "rating": 4.96,
+      "reviewCount": 135,
+      "ingredients": "Toasted California Walnuts, Dark Chocolate Ganache, Dutch Cocoa, Organic Flour, Dairy Cream",
+      "allergens": "Contains Dairy, Nuts & Gluten. 100% Eggless.",
+      "preparationTime": "3 Hours",
+      "stockStatus": "IN_STOCK",
+      "categoryId": "cat-2",
+      "seoTitle": "Chocolate Walnut Cake | Honey Bunny Bakers Greater Noida",
+      "seoDescription": "Order eggless Chocolate Walnut Cake in Greater Noida. Rs. 650. Toasted walnuts & rich fudge.",
+      "seoKeywords": "chocolate walnut cake, walnut cake, eggless chocolate walnut greater noida",
+      "images": [
+        {
+          "id": "img-15",
+          "productId": "prod-15",
+          "url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1000&auto=format&fit=crop",
+          "alt": "Roasted Walnut Chocolate Fudge Cake",
+          "isPrimary": true,
+          "order": 0
+        }
+      ],
+      "variants": [
+        {
+          "id": "var-15-1",
+          "productId": "prod-15",
+          "name": "0.5 kg",
+          "weightKg": 0.5,
+          "price": 650,
+          "servings": "4-6 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-15-2",
+          "productId": "prod-15",
+          "name": "1.0 kg",
+          "weightKg": 1,
+          "price": 1250,
+          "servings": "8-12 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-15-3",
+          "productId": "prod-15",
+          "name": "1.5 kg",
+          "weightKg": 1.5,
+          "price": 1800,
+          "servings": "14-18 Servings",
+          "inStock": true
+        },
+        {
+          "id": "var-15-4",
+          "productId": "prod-15",
+          "name": "2.0 kg",
+          "weightKg": 2,
+          "price": 2350,
+          "servings": "20-24 Servings",
+          "inStock": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "addons": [
+    {
+      "id": "addon-1",
+      "name": "Sparkler Birthday Candle (Pack of 5)",
+      "price": 49,
+      "category": "Candles",
+      "inStock": true
+    },
+    {
+      "id": "addon-2",
+      "name": "Metallic Gold 'Happy Birthday' Acrylic Topper",
+      "price": 99,
+      "category": "Toppers",
+      "inStock": true
+    },
+    {
+      "id": "addon-3",
+      "name": "Rose Gold 'Happy Anniversary' Acrylic Topper",
+      "price": 99,
+      "category": "Toppers",
+      "inStock": true
+    },
+    {
+      "id": "addon-4",
+      "name": "Celebration Party Confetti Popper (Set of 2)",
+      "price": 129,
+      "category": "Celebration",
+      "inStock": true
+    }
+  ],
+  "coupons": [
+    {
+      "id": "coup-1",
+      "code": "WELCOME10",
+      "discountType": "PERCENTAGE",
+      "discountValue": 10,
+      "minOrderAmount": 450,
+      "maxDiscount": 150,
+      "isActive": true,
+      "usageCount": 42
+    },
+    {
+      "id": "coup-2",
+      "code": "FLAT100",
+      "discountType": "FIXED",
+      "discountValue": 100,
+      "minOrderAmount": 799,
+      "isActive": true,
+      "usageCount": 18
+    },
+    {
+      "id": "coup-3",
+      "code": "HONEYBUNNY",
+      "discountType": "PERCENTAGE",
+      "discountValue": 15,
+      "minOrderAmount": 999,
+      "maxDiscount": 250,
+      "isActive": true,
+      "usageCount": 29
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "productId": "prod-8",
+      "customerName": "Ananya Deshmukh",
+      "rating": 5,
+      "title": "Best Fresh Fruit Cake in Greater Noida!",
+      "comment": "Ordered the Signature Fresh Mixed Fruit Cake for my mother's birthday in Sector Pi-2. Every bite was bursting with juicy kiwi, strawberries, and fresh cream. 100% pure eggless and so fresh!",
+      "isApproved": true,
+      "isFeatured": true,
+      "createdAt": "2026-02-10T14:30:00.000Z"
+    },
+    {
+      "id": "rev-2",
+      "productId": "prod-14",
+      "customerName": "Rahul Verma",
+      "rating": 5,
+      "title": "The Lotus Biscoff Cake is pure heaven",
+      "comment": "The Biscoff flavor was out of this world! Perfect balance of caramelized cookie crunch and soft sponge. Delivered right on time at Purvanchal Silver City II.",
+      "isApproved": true,
+      "isFeatured": true,
+      "createdAt": "2026-02-12T18:20:00.000Z"
+    },
+    {
+      "id": "rev-3",
+      "productId": "prod-12",
+      "customerName": "Sneha Kapur",
+      "rating": 5,
+      "title": "Rich Belgian Truffle - loved by all our guests",
+      "comment": "Ordered the Truffle cake for our anniversary in Greater Noida. The chocolate quality was top-notch, rich, and not overly sweet. Ordering on WhatsApp was super smooth!",
+      "isApproved": true,
+      "isFeatured": true,
+      "createdAt": "2026-02-14T11:00:00.000Z"
+    },
+    {
+      "id": "rev-4",
+      "productId": "prod-7",
+      "customerName": "Vikram Mehta",
+      "rating": 5,
+      "title": "Alphonso Mango cake was fresh and moist",
+      "comment": "Really impressed by the fresh mango glaze and sponge softness. It's so hard to find genuine 100% eggless bakes this good in Greater Noida. Highly recommended!",
+      "isApproved": true,
+      "isFeatured": true,
+      "createdAt": "2026-02-15T09:15:00.000Z"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "blog-1",
+      "slug": "best-fresh-fruit-cakes-greater-noida",
+      "title": "Why Fresh Fruit Cakes Are Greater Noida's Top Celebration Choice",
+      "excerpt": "From Ratnagiri Alphonso mangoes to mountain strawberries, discover what makes 100% eggless fresh fruit gateaus the ultimate light and refreshing dessert.",
+      "content": "\n## The Rise of Fresh Fruit Cakes\nUnlike heavy compound buttercream cakes, fresh fruit cakes offer a revitalizing blend of light dairy cream, natural fruit compotes, and moist eggless sponges.\n\n### Signature Fruit Combinations at Honey Bunny Bakers:\n* **Fresh Mixed Fruit Gateau**: Sliced kiwis, strawberries, dragonfruit, and sweet grapes.\n* **Alphonso Mango Sensation**: Real Ratnagiri mango reduction and mango mirror glaze.\n* **Wild Blueberry & Strawberry Glaze**: Antioxidant-rich whole berries infused into chilled sponge layers.\n\n### 100% Eggless Quality Promise\nAt Honey Bunny Bakers (Purvanchal Silver City II, Pi-2, Greater Noida), every cake is baked strictly 100% eggless using cultured dairy reductions, ensuring unmatched cloud-like fluffiness.\n    ",
+      "coverImage": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1200&auto=format&fit=crop",
+      "author": "Honey Bunny Bakers",
+      "readTime": "3 min read",
+      "tags": "Fruit Cakes, 100% Eggless, Greater Noida, Bakery Guide",
+      "isPublished": true,
+      "publishedAt": "2026-02-01T00:00:00.000Z",
+      "createdAt": "2026-02-01T00:00:00.000Z",
+      "updatedAt": "2026-02-01T00:00:00.000Z"
+    },
+    {
+      "id": "blog-2",
+      "slug": "how-to-order-custom-cakes-whatsapp-greater-noida",
+      "title": "How to Order Custom Designer Cakes on WhatsApp in 3 Easy Steps",
+      "excerpt": "Got a Pinterest or Instagram cake design? Here is how to get an instant quote and doorstep delivery in Greater Noida.",
+      "content": "\n## Seamless WhatsApp Cake Ordering\nPlanning a milestone birthday, kids theme party, or anniversary? Ordering a custom designer cake at Honey Bunny Bakers is effortless:\n\n1. **Step 1: Choose Your Flavor & Size**: Pick from Biscoff, Truffle, Fruit Mango, Ice Cream Cake, or Rasmalai.\n2. **Step 2: Share Your Photo Reference**: Upload your Pinterest inspiration on our Custom Cake Studio or directly share via WhatsApp.\n3. **Step 3: Instant Quotation & Delivery**: Receive confirmed price and delivery slot for doorstep delivery in Greater Noida or pickup at Purvanchal Silver City II.\n    ",
+      "coverImage": "https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=1200&auto=format&fit=crop",
+      "author": "Honey Bunny Bakers",
+      "readTime": "4 min read",
+      "tags": "Custom Cakes, WhatsApp Ordering, Party Planning",
+      "isPublished": true,
+      "publishedAt": "2026-02-05T00:00:00.000Z",
+      "createdAt": "2026-02-05T00:00:00.000Z",
+      "updatedAt": "2026-02-05T00:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1",
+      "orderNumber": "BAK-2026-00101",
+      "userId": "user-customer-1",
+      "customerName": "Priya Sharma",
+      "customerEmail": "priya.sharma@example.com",
+      "customerPhone": "+919812345678",
+      "deliveryType": "DELIVERY",
+      "address": "Tower 5, Flat 902, Purvanchal Silver City II, Sector Pi-2",
+      "landmark": "Near Main Gate 2",
+      "city": "Greater Noida",
+      "postalCode": "201310",
+      "deliveryDate": "2026-08-18",
+      "deliverySlot": "Evening Express (06:00 PM - 09:00 PM)",
+      "cakeMessage": "Happy Birthday Siddharth!",
+      "orderNotes": "Please deliver before 7 PM and handle with utmost care.",
+      "subtotal": 600,
+      "discount": 50,
+      "deliveryCharge": 0,
+      "tax": 30,
+      "total": 580,
+      "status": "PREPARING",
+      "paymentStatus": "PAID",
+      "paymentMethod": "RAZORPAY",
+      "razorpayOrderId": "order_mock_123456",
+      "razorpayPaymentId": "pay_mock_789012",
+      "items": [
+        {
+          "id": "item-1",
+          "orderId": "ord-1",
+          "productId": "prod-8",
+          "variantId": "var-8-1",
+          "variantName": "0.5 kg",
+          "weightKg": 0.5,
+          "unitPrice": 600,
+          "quantity": 1,
+          "cakeMessage": "Happy Birthday Siddharth!",
+          "eggless": true,
+          "totalPrice": 600
+        }
+      ],
+      "createdAt": "2026-08-16T10:15:00.000Z",
+      "updatedAt": "2026-08-16T11:00:00.000Z"
+    }
+  ],
+  "customCakeRequests": [
+    {
+      "id": "cc-1",
+      "inquiryNumber": "CC-2026-00101",
+      "userId": "user-customer-1",
+      "customerName": "Rohan Nair",
+      "customerPhone": "+919988776655",
+      "customerEmail": "rohan.nair@example.com",
+      "customerWhatsapp": "919988776655",
+      "occasion": "Engagement Celebration",
+      "flavor": "Fresh Mixed Fruit Gateau",
+      "tierSizeKg": "2-Tier (3.0 kg)",
+      "servingsEstimate": "30-35 Servings",
+      "referenceImageUrl": "https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=800&auto=format&fit=crop",
+      "designNotes": "Pastel peach finish with white florals and fresh seasonal berries between the two tiers.",
+      "cakeMessage": "Forever Begins Today - R & S",
+      "themeColor": "Peach & Warm Gold",
+      "toppings": "Fresh exotic fruits and edible florals",
+      "nameOnCake": "Rohan & Sneha",
+      "isEggless": true,
+      "deliveryDate": "2026-08-25",
+      "deliverySlot": "Afternoon Slot (02:00 PM - 05:00 PM)",
+      "deliveryType": "DELIVERY",
+      "address": "Tower 2, Flat 1204, Eldeco Utopia, Sector Omega 1, Greater Noida",
+      "estimatedPriceMin": 2800,
+      "estimatedPriceMax": 3500,
+      "quotationPrice": 3200,
+      "adminNotes": "Client requested 100% eggless fresh fruit decor. Slot confirmed.",
+      "status": "QUOTATION_SENT",
+      "createdAt": "2026-08-16T08:30:00.000Z",
+      "updatedAt": "2026-08-16T10:00:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "title": "New Cake Order Placed",
+      "message": "Order #BAK-2026-00101 received for ₹580 from Priya Sharma",
+      "type": "ORDER",
+      "isRead": false,
+      "link": "/admin/orders",
+      "createdAt": "2026-08-16T10:15:00.000Z"
+    },
+    {
+      "id": "notif-2",
+      "title": "New Custom Cake Inquiry",
+      "message": "Inquiry #CC-2026-00101 for 2-Tier Engagement Cake received",
+      "type": "CUSTOM_CAKE",
+      "isRead": false,
+      "link": "/admin/custom-cakes",
+      "createdAt": "2026-08-16T08:30:00.000Z"
+    }
+  ]
+}
