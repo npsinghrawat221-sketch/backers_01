@@ -182,7 +182,7 @@ export default function LocationsPage() {
                   </div>
                   <div className="text-[11px] text-emerald-900 space-y-0.5 pl-7">
                     <div><span className="font-semibold">Reg. ID:</span> {siteConfig.fssai.licenseNumber}</div>
-                    <div><span className="font-semibold">Operator:</span> {siteConfig.fssai.registeredName}</div>
+                    {/* <div><span className="font-semibold">Operator:</span> {siteConfig.fssai.registeredName}</div> */}
                     <div><span className="font-semibold">Issuing Authority:</span> {siteConfig.fssai.issuingAuthority} (Valid upto 2031)</div>
                   </div>
                 </div>
