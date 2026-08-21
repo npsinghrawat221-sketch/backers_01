@@ -150,3 +150,35 @@ All bakery details are centrally managed in `src/config/site.ts`:
 - Delivery Fees & Free Shipping Thresholds
 - Delivery Time Slots
 - Social Media Links
+
+---
+
+## 🚀 Deploying to Vercel
+
+### Step 1: Provision a Free Cloud Database
+Create a PostgreSQL database on one of the following serverless providers:
+- [Supabase](https://supabase.com)
+- [Neon](https://neon.tech)
+- [Prisma Postgres](https://www.prisma.io/postgres)
+
+Copy your connection string (e.g., `postgresql://postgres:password@db.xxx.supabase.co:5432/postgres`).
+
+### Step 2: Push Database Schema & Seed Data
+Run the following commands locally using your cloud connection string:
+```bash
+# Push schema tables to your cloud database
+npx prisma db push
+
+# Seed initial bakery products, categories, coupons, and reviews
+npx prisma db seed
+```
+
+### Step 3: Deploy on Vercel
+1. Import your GitHub / GitLab repository in [Vercel](https://vercel.com).
+2. Set Environment Variables in Vercel Project Settings:
+   - `DATABASE_URL`: Your PostgreSQL connection string.
+   - `NEXT_PUBLIC_SITE_URL`: Your production Vercel URL (e.g., `https://your-bakery.vercel.app`).
+   - `RAZORPAY_KEY_ID`: *(Optional)* Your Razorpay API Key ID.
+   - `RAZORPAY_KEY_SECRET`: *(Optional)* Your Razorpay API Key Secret.
+3. Click **Deploy**. Vercel will automatically run `prisma generate && next build` and deploy your app!
+
