@@ -116,6 +116,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/menu" className="hover:text-amber-400 transition-colors font-bold text-amber-300">
+                  📜 Menu Card & Rates
+                </Link>
+              </li>
+              <li>
                 <Link href="/custom-cakes" className="hover:text-amber-400 transition-colors">
                   Custom Cake Studio
                 </Link>

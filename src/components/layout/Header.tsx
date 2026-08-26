@@ -30,11 +30,12 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/cakes", label: "Cakes & Menu", icon: Cake },
-    { href: "/custom-cakes", label: "Custom Cake Studio", icon: Sparkles, highlight: true },
+    { href: "/cakes", label: "All Cakes", icon: Cake },
+    { href: "/menu", label: "Menu Card & Rates", icon: Sparkles, highlight: true },
+    { href: "/custom-cakes", label: "Custom Studio", icon: Sparkles },
     { href: "/track-order", label: "Track Order", icon: Truck },
     { href: "/blog", label: "Bakery Stories", icon: Layers },
-    { href: "/locations", label: "Location & Delivery", icon: MapPin },
+    { href: "/locations", label: "Locations", icon: MapPin },
   ];
 
   return (
