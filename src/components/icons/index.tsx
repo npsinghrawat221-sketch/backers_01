@@ -473,3 +473,11 @@ export const Eye = ({ size = 24, className = "", ...props }: IconProps) => (
     <circle cx="12" cy="12" r="3" />
   </svg>
 );
+
+export const ChefHat = ({ size = 24, className = "", ...props }: IconProps) => (
+  <svg {...defaultProps} width={size} height={size} className={className} {...props}>
+    <path d="M6 13.8a6 6 0 0 1 11.9 0" />
+    <path d="M6 17h12a1 1 0 0 0 1-1v-2.2a6 6 0 0 0-4.8-5.9 4 4 0 0 0-6.4 0A6 6 0 0 0 3 13.8V16a1 1 0 0 0 1 1Z" />
+    <path d="M6 17v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4" />
+  </svg>
+);

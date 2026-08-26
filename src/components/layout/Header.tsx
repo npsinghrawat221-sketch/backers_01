@@ -22,12 +22,14 @@ import {
 import { siteConfig, getWhatsAppUrl } from "@/config/site";
 import { useCart } from "@/context/CartContext";
 import { SearchModal } from "@/components/layout/SearchModal";
+import { MenuCardModal } from "@/components/menu/MenuCardModal";
 
 export function Header() {
   const pathname = usePathname();
   const { isLoaded, itemCount, setIsCartOpen } = useCart();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
 
   const navLinks = [
     { href: "/cakes", label: "All Cakes", icon: Cake },
@@ -107,20 +109,34 @@ export function Header() {
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 const Icon = link.icon;
+                const isMenuCard = link.href === "/menu";
+
                 return (
-                  <Link
+                  <button
                     key={link.href}
-                    href={link.href}
-                    className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold transition-all ${isActive
+                    onClick={() => {
+                      if (isMenuCard) {
+                        setIsMenuModalOpen(true);
+                      } else {
+                        window.location.href = link.href;
+                      }
+                    }}
+                    onMouseEnter={() => {
+                      if (isMenuCard) {
+                        // Option for hover preview trigger if desired
+                      }
+                    }}
+                    className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold transition-all cursor-pointer ${
+                      isActive
                         ? "bg-amber-100/80 text-amber-900 shadow-xs"
                         : link.highlight
                           ? "text-amber-800 bg-amber-50 hover:bg-amber-100/70 border border-amber-200"
                           : "text-[#221610] hover:text-amber-800 hover:bg-amber-50/60"
-                      }`}
+                    }`}
                   >
                     <Icon className={`w-4 h-4 ${link.highlight ? "text-amber-700 animate-pulse" : "text-[#786B62]"}`} />
                     {link.label}
-                  </Link>
+                  </button>
                 );
               })}
             </nav>
@@ -223,6 +239,9 @@ export function Header() {
 
       {/* Global Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+
+      {/* Interactive Menu Card Modal */}
+      <MenuCardModal isOpen={isMenuModalOpen} onClose={() => setIsMenuModalOpen(false)} />
     </>
   );
 }
