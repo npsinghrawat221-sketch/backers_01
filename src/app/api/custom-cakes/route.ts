@@ -80,8 +80,8 @@ export async function POST(request: Request) {
         address: address || "",
         estimatedPriceMin: estimatedPriceMin || 1200,
         estimatedPriceMax: estimatedPriceMax || 1800,
-        quotationPrice: null,
-        adminNotes: null,
+        quotationPrice: undefined,
+        adminNotes: undefined,
         status: "PENDING",
       },
     });

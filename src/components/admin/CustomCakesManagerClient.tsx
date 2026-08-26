@@ -210,7 +210,7 @@ export function CustomCakesManagerClient({
                   <a
                     href={generateQuotationReplyWhatsAppLink(
                       inq,
-                      inq.quotationPrice || inq.estimatedPriceMin,
+                      inq.quotationPrice || inq.estimatedPriceMin || 0,
                       inq.adminNotes || "We would love to bake your dream celebration cake!"
                     )}
                     target="_blank"
@@ -353,7 +353,7 @@ export function CustomCakesManagerClient({
                 <a
                   href={generateQuotationReplyWhatsAppLink(
                     selectedInquiry,
-                    quotePrice || selectedInquiry.quotationPrice || 3850,
+                    Number(quotePrice) || selectedInquiry.quotationPrice || 3850,
                     adminNotes
                   )}
                   target="_blank"

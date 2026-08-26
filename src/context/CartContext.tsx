@@ -28,6 +28,9 @@ interface CartContextType {
   clearCart: () => void;
   isCartOpen: boolean;
   setIsCartOpen: (open: boolean) => void;
+  isDrawerOpen: boolean;
+  openDrawer: () => void;
+  closeDrawer: () => void;
   appliedCoupon: Coupon | null;
   applyCoupon: (code: string) => Promise<{ success: boolean; message: string }>;
   removeCoupon: () => void;
@@ -184,6 +187,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         clearCart,
         isCartOpen,
         setIsCartOpen,
+        isDrawerOpen: isCartOpen,
+        openDrawer: () => setIsCartOpen(true),
+        closeDrawer: () => setIsCartOpen(false),
         appliedCoupon,
         applyCoupon,
         removeCoupon,
