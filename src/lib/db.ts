@@ -45,7 +45,10 @@ function loadDatabase(): DatabaseState {
   try {
     if (typeof window === "undefined" && fs.existsSync(DB_FILE)) {
       const data = fs.readFileSync(DB_FILE, "utf-8");
-      return JSON.parse(data);
+      const parsed: DatabaseState = JSON.parse(data);
+      // Ensure product catalog always uses the latest official menu rates
+      parsed.products = initialProducts;
+      return parsed;
     }
   } catch (error) {
     console.error("Error reading database file, using initial data:", error);
